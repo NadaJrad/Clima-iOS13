@@ -9,6 +9,8 @@ class WeatherViewController: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var searchTextField: UITextField!
     
+     var weatherManager = WeatherManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
