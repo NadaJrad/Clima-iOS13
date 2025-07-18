@@ -7,5 +7,6 @@ struct WeatherManager {
     
     func fetchWeather (cityName : String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
+        print(urlString)
     }
 }
