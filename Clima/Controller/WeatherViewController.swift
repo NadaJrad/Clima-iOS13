@@ -50,7 +50,10 @@ class WeatherViewController: UIViewController , UITextFieldDelegate , WeatherMan
         searchTextField.text = ""
     }
     func didUpdateWeather (_ weatherManager: WeatherManager, weather: WeatherModel){
-        print(weather.temperature)
+        DispatchQueue.main.async{
+            self.temperatureLabel.text = weather.temperatureString
+        }
+      
     }
     func didFailError(error: Error){
         print(error)
